@@ -249,7 +249,8 @@ if uploaded_file:
 
     with st.spinner("🔎 Retrieving relevant reference material..."):
         retriever = knowledge_db.as_retriever(search_kwargs={"k": 3})
-        ref_docs = retriever.get_relevant_documents(rfp_text)
+        # ref_docs = retriever.get_relevant_documents(rfp_text)
+        ref_docs = retriever.invoke(rfp_text)
         reference_text = "\n\n".join([d.page_content for d in ref_docs])
     st.success(f"✅ Retrieved {len(ref_docs)} relevant reference documents!")
 
