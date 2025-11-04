@@ -245,61 +245,61 @@
 # {condensed_rfp:6000}
 # """
 
-def get_communication_plan_prompt(reference_text, condensed_rfp):
-    """
-    Generates the Communication Plan section with structured subsections
-    that strictly follow the client's required format and content for governance.
-    """
-    return f"""
-You are an expert SAP proposal writer at Crave InfoTech.
+# def get_communication_plan_prompt(reference_text, condensed_rfp):
+#     """
+#     Generates the Communication Plan section with structured subsections
+#     that strictly follow the client's required format and content for governance.
+#     """
+#     return f"""
+# You are an expert SAP proposal writer at Crave InfoTech.
 
-You will create a structured section titled **Communication Plan**. The output MUST strictly follow the content and tables outlined below.
+# You will create a structured section titled **Communication Plan**. The output MUST strictly follow the content and tables outlined below.
 
-**STRICT STRUCTURE AND CONTENT REQUIRED:**
+# **STRICT STRUCTURE AND CONTENT REQUIRED:**
 
-### Communication Plan
+# ### Communication Plan
 
-1.  **Communication Overview:** Start with the sentence: "Following table represents different reports that will be generated periodically and circulated to various stakeholders."
+# 1.  **Communication Overview:** Start with the sentence: "Following table represents different reports that will be generated periodically and circulated to various stakeholders."
 
-2.  **Table 1: Exhibit: Daily Interaction:**
-    * **Content:** 5-column table (`Activity`, `Communication Mode`, `Report Recipient/s`, `Frequency`, `Comments`) covering **Weekly Status Reports** and **Project Effort and Schedule Variance**. Include Crave PM and [Client Name] PM as recipients.
-    * **Closing:** Conclude with the fixed sentence: "Additional meetings will be decided during project planning phase as necessary."
+# 2.  **Table 1: Exhibit: Daily Interaction:**
+#     * **Content:** 5-column table (`Activity`, `Communication Mode`, `Report Recipient/s`, `Frequency`, `Comments`) covering **Weekly Status Reports** and **Project Effort and Schedule Variance**. Include Crave PM and [Client Name] PM as recipients.
+#     * **Closing:** Conclude with the fixed sentence: "Additional meetings will be decided during project planning phase as necessary."
 
-### Issue Resolution and Escalation Procedure
+# ### Issue Resolution and Escalation Procedure
 
-3.  **Introductory Paragraphs:**
-    * Paragraph 1: Describe the Crave InfoTech Project Manager's role in identifying, capturing, resolving, tracking, monitoring, and deciding on appropriate escalations.
-    * Paragraph 2: State: "The responsibilities / timescales for executing these procedures are:"
+# 3.  **Introductory Paragraphs:**
+#     * Paragraph 1: Describe the Crave InfoTech Project Manager's role in identifying, capturing, resolving, tracking, monitoring, and deciding on appropriate escalations.
+#     * Paragraph 2: State: "The responsibilities / timescales for executing these procedures are:"
 
-4.  **Table 2: Issue Management:**
-    * **Content:** 3-column table (`Task`, `Timescale`, `Responsibility`) detailing the 3 core tasks: **Raise Issue Report**, **Assessment/Management**, and **Reporting**. Ensure Crave PM is responsible for the latter two.
+# 4.  **Table 2: Issue Management:**
+#     * **Content:** 3-column table (`Task`, `Timescale`, `Responsibility`) detailing the 3 core tasks: **Raise Issue Report**, **Assessment/Management**, and **Reporting**. Ensure Crave PM is responsible for the latter two.
 
-5.  **Issue Reporting Guidelines:**
-    * **Content:** Generate the complete 7-point bulleted list detailing the full issue reporting lifecycle (from issue report development, documentation, classification, action definition, assignment, monitoring, and closure by the Crave PM).
+# 5.  **Issue Reporting Guidelines:**
+#     * **Content:** Generate the complete 7-point bulleted list detailing the full issue reporting lifecycle (from issue report development, documentation, classification, action definition, assignment, monitoring, and closure by the Crave PM).
 
-6.  **Classification Intro:** Add the line: "Following exhibit explains the process of issue classification:"
+# 6.  **Classification Intro:** Add the line: "Following exhibit explains the process of issue classification:"
 
-7.  **Table 3: Issue Classification:**
-    * **Content:** 4-column table (`Problem Type`, `Definition`, `Reporting process`, `Solution Responsible`) classifying issues into **Low, Serious, and Critical**. Ensure the process and responsibility reflect escalation to the Client PM for Serious/Critical issues.
+# 7.  **Table 3: Issue Classification:**
+#     * **Content:** 4-column table (`Problem Type`, `Definition`, `Reporting process`, `Solution Responsible`) classifying issues into **Low, Serious, and Critical**. Ensure the process and responsibility reflect escalation to the Client PM for Serious/Critical issues.
 
-8.  **Escalation Intro:** Add the line: "Following escalation process will be followed as part of the issue management:"
+# 8.  **Escalation Intro:** Add the line: "Following escalation process will be followed as part of the issue management:"
 
-9.  **Table 4: Exhibit: Escalation Process:**
-    * **Content:** 4-column table detailing two escalation levels: **Project Manager** (for delivery/quality issues, 48hr criteria, Weekly checkpoints) and **Account Executive** (for contract/program management issues, 48hr criteria, Monthly Review).
+# 9.  **Table 4: Exhibit: Escalation Process:**
+#     * **Content:** 4-column table detailing two escalation levels: **Project Manager** (for delivery/quality issues, 48hr criteria, Weekly checkpoints) and **Account Executive** (for contract/program management issues, 48hr criteria, Monthly Review).
 
-10. **Closing Sentence:** Add the final line: "The Project Workgroup will be comprised of representatives from Crave InfoTech and [Client Name/Haceb] key project stakeholder."
+# 10. **Closing Sentence:** Add the final line: "The Project Workgroup will be comprised of representatives from Crave InfoTech and [Client Name/Haceb] key project stakeholder."
 
-Formatting rules:
-- Use markdown headers (# or ##) only as shown in the output structure.
-- Use "Haceb" or "the client" based on context.
-- Keep tone formal, structured, and professional.
+# Formatting rules:
+# - Use markdown headers (# or ##) only as shown in the output structure.
+# - Use "Haceb" or "the client" based on context.
+# - Keep tone formal, structured, and professional.
 
-Reference Material:
-{reference_text}
+# Reference Material:
+# {reference_text}
 
-Condensed RFP:
-{condensed_rfp}
-"""
+# Condensed RFP:
+# {condensed_rfp}
+# """
 
 
 def get_executive_summary_and_objective_prompt(reference_text, condensed_rfp, num_interfaces=None):
