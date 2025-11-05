@@ -8,3 +8,4 @@ __pycache__/
 .DS_Store
 *.log
 app.py
+new_app.py
